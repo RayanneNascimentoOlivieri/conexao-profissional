@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Treinamento de Capacitação Profissional em São José do Rio Pardo. Três dias intensivos com palestrantes, prática e certificado."
+    />
+    <meta name="theme-color" content="#0a1628" />
+    <meta property="og:title" content="Treinamento de Capacitação Profissional" />
+    <meta
+      property="og:description"
+      content="Três dias de capacitação prática em São José do Rio Pardo, com certificado e conteúdo aplicável."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/logoClara.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Treinamento de Capacitação Profissional • Conexão Profissional</title>
+    <link rel="icon" type="image/jpeg" href="images/logoClara.jpeg" />
+    <link rel="preconnect" href="https://api.qrserver.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="topo">
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Navegação principal">
+        <a class="brand" href="#topo" data-scroll-top aria-label="Início">
+          <span class="brand-logo" aria-hidden="true">
+            <img class="logo-image logo-light" src="images/logoClara.jpeg" alt="" />
+            <img class="logo-image logo-dark" src="images/logoEscura.jpeg" alt="" />
+          </span>
+          <span class="brand-text">
+            <strong>Conexão Profissional</strong>
+            <small>Capacitação corporativa</small>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="menu">
+          <a href="#sobre">Sobre</a>
+          <a href="#palestrantes">Palestrantes</a>
+          <a href="#cronograma">Cronograma</a>
+          <a href="#voce-leva">Você leva</a>
+          <a href="#faq">FAQ</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="Alternar tema escuro" aria-pressed="false">
+            <span class="theme-icon-sun" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 3v1.6M12 19.4V21M4.2 4.2l1.1 1.1M18.7 18.7l1.1 1.1M3 12h1.6M19.4 12H21M4.2 19.8l1.1-1.1M18.7 5.3l1.1-1.1" />
+              </svg>
+            </span>
+            <span class="theme-icon-moon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.7A9 9 0 0 1 11.3 3a7.5 7.5 0 1 0 9.7 9.7Z" />
+              </svg>
+            </span>
+          </button>
+          <a class="nav-cta" href="https://www.sympla.com.br/evento/teste-para-site/3399924" target="_blank" rel="noopener">
+            Inscrever-se
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio">
+        <div class="hero-bg" aria-hidden="true">
+          <span class="orb orb-1"></span>
+          <span class="orb orb-2"></span>
+          <span class="orb orb-3"></span>
+          <div class="hero-grid-overlay"></div>
+        </div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="badge reveal">
+              <span class="badge-dot"></span>
+              Inscrições abertas • 8, 9 e 10 de junho
+            </span>
+            <h1 class="reveal delay-1">
+              <span class="text-gradient">Treinamento</span> <br> de capacitação prática
+            </h1>
+            <p class="hero-lead reveal delay-2">
+              Três dias em São José do Rio Pardo para desenvolver comunicação,
+              desempenho e gestão com conteúdo aplicável ao mercado.
+            </p>
+
+            <div class="hero-proof reveal delay-3" aria-label="Resumo do evento">
+              <span>Presencial</span>
+              <span>Certificado no encerramento</span>
+              <span>Vagas limitadas</span>
+            </div>
+
+            <div class="hero-actions reveal delay-4">
+              <a class="button primary magnetic" href="https://www.sympla.com.br/evento/teste-para-site/3399924" target="_blank" rel="noopener">
+                <span>Garantir minha vaga</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <a class="button ghost" href="#cronograma">Ver programação</a>
+            </div>
+          </div>
+
+          <aside class="hero-card reveal delay-2" aria-label="Resumo da inscrição">
+            <div class="hero-card-top">
+              <div class="hero-logo-frame">
+                <img class="hero-logo logo-light" src="images/logoClara.jpeg" alt="Logo Conexão Profissional" />
+                <img class="hero-logo logo-dark" src="images/logoEscura.jpeg" alt="Logo Conexão Profissional" />
+              </div>
+              <div>
+                <span class="card-eyebrow">Contagem regressiva</span>
+                <h2>Faltam para começar</h2>
+              </div>
+            </div>
+
+            <div class="countdown" role="timer" aria-live="polite">
+              <div><strong data-countdown="days">--</strong><span>dias</span></div>
+              <div><strong data-countdown="hours">--</strong><span>horas</span></div>
+              <div><strong data-countdown="minutes">--</strong><span>min</span></div>
+              <div><strong data-countdown="seconds">--</strong><span>seg</span></div>
+            </div>
+
+            <div class="hero-card-cta">
+              <img
+                class="qr-mini"
+                src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=10&data=https%3A%2F%2Fwww.sympla.com.br%2Fevento%2Fteste-para-site%2F3399924"
+                alt="QR Code de inscrição"
+              />
+              <div>
+                <strong>Inscrição pelo Sympla</strong>
+                <p>Aponte a câmera ou toque no botão para abrir.</p>
+                <a class="text-link" href="https://www.sympla.com.br/evento/teste-para-site/3399924" target="_blank" rel="noopener">
+                  Abrir página de inscrição →
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="sobre">
+        <div class="container two-column">
+          <div class="reveal">
+            <span class="eyebrow">Por que participar</span>
+            <h2>Treinamento prático para quem quer <span class="text-gradient">resultados visíveis</span></h2>
+            <p>
+              Conteúdo construído a partir das demandas reais do mercado de São José do Rio
+              Pardo, traduzindo o que se aprende em sala para a rotina das empresas e dos
+              profissionais. Você sai com clareza do próximo passo a aplicar.
+            </p>
+          </div>
+          <div class="pillars reveal delay-1">
+            <article class="pillar">
+              <span class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2 3 6v6c0 5 4 8 9 10 5-2 9-5 9-10V6l-9-4Z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </span>
+              <h3>Habilidades técnicas</h3>
+              <p>Ferramentas, métodos e exemplos aplicáveis no dia seguinte ao treinamento.</p>
+            </article>
+            <article class="pillar">
+              <span class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z" />
+                </svg>
+              </span>
+              <h3>Comunicação e postura</h3>
+              <p>Como se posicionar, dar e receber feedback, atuar em equipe com clareza.</p>
+            </article>
+            <article class="pillar">
+              <span class="pillar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12h4l3-8 4 16 3-8h4" />
+                </svg>
+              </span>
+              <h3>Gestão de equipes</h3>
+              <p>Organizar demandas, acompanhar resultados e fortalecer o engajamento.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="palestrantes">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Quem vai conduzir</span>
+            <h2>Especialistas convidados</h2>
+            <p>
+              Espaço reservado para os palestrantes e equipe de apoio do treinamento.
+              Os nomes abaixo são de exemplo até a confirmação final.
+            </p>
+          </div>
+
+          <div class="speaker-grid">
+            <article class="speaker-card reveal">
+              <div class="speaker-photo" aria-hidden="true">
+                <span>AM</span>
+              </div>
+              <span class="speaker-tag">Liderança</span>
+              <h3>Ana Martins</h3>
+              <p>Consultora em liderança, comunicação e organização de rotinas produtivas.</p>
+              <ul class="speaker-meta">
+                <li>10+ anos de experiência</li>
+                <li>Foco em times de alta performance</li>
+              </ul>
+            </article>
+            <article class="speaker-card reveal delay-1">
+              <div class="speaker-photo" aria-hidden="true">
+                <span>RP</span>
+              </div>
+              <span class="speaker-tag">Desenvolvimento</span>
+              <h3>Rafael Prado</h3>
+              <p>Facilitador de treinamentos corporativos com foco em habilidades comportamentais.</p>
+              <ul class="speaker-meta">
+                <li>Treinamentos in-company</li>
+                <li>Especialista em soft skills</li>
+              </ul>
+            </article>
+            <article class="speaker-card reveal delay-2">
+              <div class="speaker-photo" aria-hidden="true">
+                <span>CS</span>
+              </div>
+              <span class="speaker-tag">Mercado</span>
+              <h3>Camila Souza</h3>
+              <p>Convidada para conectar teoria, prática e demandas reais das empresas locais.</p>
+              <ul class="speaker-meta">
+                <li>Experiência em RH</li>
+                <li>Mentoria de carreira</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cronograma">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Cronograma</span>
+            <h2>Três dias planejados de ponta a ponta</h2>
+            <p>Os horários abaixo são previstos e podem ser ajustados quando estiverem confirmados.</p>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <header>
+                <span class="date-tag">Dia 01</span>
+                <strong>08/06</strong>
+              </header>
+              <h3>Diagnóstico e fundamentos</h3>
+              <p>Boas-vindas, alinhamento de expectativas, diagnóstico das necessidades e introdução aos temas centrais.</p>
+              <small>Horário previsto: 19h às 22h</small>
+            </article>
+            <article class="timeline-item reveal delay-1">
+              <header>
+                <span class="date-tag">Dia 02</span>
+                <strong>09/06</strong>
+              </header>
+              <h3>Prática e desenvolvimento</h3>
+              <p>Atividades em grupo, estudos de caso e aplicação de ferramentas voltadas à rotina das empresas.</p>
+              <small>Horário previsto: 19h às 22h</small>
+            </article>
+            <article class="timeline-item highlight reveal delay-2">
+              <header>
+                <span class="date-tag">Dia 03</span>
+                <strong>10/06</strong>
+              </header>
+              <h3>Avaliação, formatura e confraternização</h3>
+              <p>Fechamento dos conteúdos, avaliação dos resultados, entrega dos certificados e confraternização.</p>
+              <small>Horário previsto: 19h às 22h30</small>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-feature" id="voce-leva">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">O que você leva</span>
+            <h2>Mais do que aulas: <span class="text-gradient">aprendizado aplicável e reconhecimento</span></h2>
+            <p>O foco do treinamento é entregar conhecimento prático e a certificação que valoriza a sua trajetória.</p>
+          </div>
+
+          <div class="benefits">
+            <article class="benefit reveal">
+              <span class="benefit-num">01</span>
+              <h3>Conhecimento aplicável</h3>
+              <p>Conteúdo prático, com exemplos reais para usar imediatamente no trabalho.</p>
+            </article>
+            <article class="benefit highlight reveal delay-1">
+              <span class="benefit-num">02</span>
+              <h3>Certificado oficial</h3>
+              <p>Entrega na cerimônia de encerramento em 10/06 — válido para currículo e perfil profissional.</p>
+            </article>
+            <article class="benefit reveal delay-2">
+              <span class="benefit-num">03</span>
+              <h3>Networking</h3>
+              <p>Convivência com outros profissionais e conexões para futuras oportunidades.</p>
+            </article>
+            <article class="benefit reveal delay-3">
+              <span class="benefit-num">04</span>
+              <h3>Material de apoio</h3>
+              <p>Conteúdos didáticos e referências para revisar e aprofundar depois do evento.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="entregas">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Estrutura do projeto</span>
+            <h2>Como o treinamento é construído por trás dos panos</h2>
+            <p>Cada etapa é planejada para garantir qualidade, organização e bons resultados para todos os envolvidos.</p>
+          </div>
+
+          <div class="deliverables">
+            <article class="reveal">
+              <span>01</span>
+              <h3>Diagnóstico</h3>
+              <p>Levantamento das necessidades de capacitação a partir do contexto local.</p>
+            </article>
+            <article class="reveal delay-1">
+              <span>02</span>
+              <h3>Plano estruturado</h3>
+              <p>Definição de temas, metodologia, cronograma, responsáveis e recursos.</p>
+            </article>
+            <article class="reveal delay-2">
+              <span>03</span>
+              <h3>Material didático</h3>
+              <p>Apostilas, apresentações e exercícios claros, organizados e fáceis de seguir.</p>
+            </article>
+            <article class="reveal delay-3">
+              <span>04</span>
+              <h3>Execução</h3>
+              <p>Realização dos três encontros com acompanhamento e registro das atividades.</p>
+            </article>
+            <article class="reveal delay-4">
+              <span>05</span>
+              <h3>Relatório final</h3>
+              <p>Avaliação dos resultados, presença, engajamento e recomendações.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="faq">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Perguntas frequentes</span>
+            <h2>Tudo o que você precisa saber antes de se inscrever</h2>
+          </div>
+
+          <div class="faq reveal delay-1">
+            <details>
+              <summary>
+                <span>Como faço minha inscrição?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-body">
+                <p>A inscrição é feita pela página oficial no Sympla, no botão “Garantir minha vaga”, ou apontando a câmera para o QR Code que aparece no site.</p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span>Quem pode participar?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-body">
+                <p>O treinamento é aberto a profissionais interessados em desenvolver habilidades técnicas e comportamentais. Em caso de vagas remanescentes, novos públicos podem ser contemplados.</p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span>Recebo certificado?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-body">
+                <p>Sim. O certificado é entregue presencialmente na cerimônia de encerramento em 10/06.</p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span>Onde acontece?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-body">
+                <p>Em São José do Rio Pardo. O endereço completo será divulgado para os inscritos antes do evento.</p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span>Tenho que ir nos três dias?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-body">
+                <p>A presença nos três dias é fortemente recomendada para o aproveitamento completo e para a entrega do certificado.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-cta" id="inscricao">
+        <div class="container signup-grid">
+          <div class="reveal">
+            <span class="eyebrow on-dark">Inscrição</span>
+            <h2>Sua vaga está a um <span class="text-gradient bright">QR Code</span> de distância</h2>
+            <p>
+              Inscreva-se pelo Sympla e receba todas as informações por lá. Para tirar dúvidas
+              rápidas, entre no nosso grupo do WhatsApp.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button primary white" href="https://www.sympla.com.br/evento/teste-para-site/3399924" target="_blank" rel="noopener">
+                Inscrever-se pelo Sympla
+              </a>
+              <a class="button whatsapp" id="whatsappLink" href="https://chat.whatsapp.com/JFBegchWmZvCUoLn2EI510" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M20.5 3.5A11.4 11.4 0 0 0 12 .1C5.6.1.4 5.3.4 11.7c0 2 .5 4 1.5 5.7L.1 23.9l6.7-1.8a11.6 11.6 0 0 0 5.2 1.3h.1c6.4 0 11.6-5.2 11.6-11.6.1-3-1.1-5.9-3.2-8.3Zm-8.5 18a9.6 9.6 0 0 1-4.9-1.4l-.4-.2-3.9 1 1-3.8-.2-.4a9.7 9.7 0 0 1 8.4-14.5c2.6 0 5 1 6.8 2.9a9.6 9.6 0 0 1-6.8 16.4Zm5.4-7.2c-.3-.2-1.7-.9-2-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1c-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5s.1-.4 0-.6c-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.3 2.1 3.2 5.1 4.5 2.5 1.1 3 .9 3.5.8.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3Z"/>
+                </svg>
+                Tirar dúvidas no WhatsApp
+              </a>
+            </div>
+
+            <p class="micro-note">
+              <span class="badge-dot"></span>
+              Vagas limitadas — confirme o quanto antes
+            </p>
+          </div>
+
+          <div class="signup-card reveal delay-1">
+            <img
+              class="qr-code"
+              src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&margin=12&data=https%3A%2F%2Fwww.sympla.com.br%2Fevento%2Fteste-para-site%2F3399924"
+              alt="QR Code de inscrição no Sympla"
+            />
+            <strong>Aponte sua câmera</strong>
+            <p>sympla.com.br/evento/teste-para-site/3399924</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <span class="footer-brand">
+            <img class="logo-image logo-light" src="images/logoClara.jpeg" alt="" />
+            <img class="logo-image logo-dark" src="images/logoEscura.jpeg" alt="" />
+            <strong>Conexão Profissional</strong>
+          </span>
+          <p>Treinamento de Capacitação Profissional — projeto acadêmico aplicado às necessidades reais das empresas.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Links do rodapé">
+          <a href="#sobre">Sobre</a>
+          <a href="#palestrantes">Palestrantes</a>
+          <a href="#cronograma">Cronograma</a>
+          <a href="#voce-leva">Você leva</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div>
+          <a class="footer-cta" href="https://www.sympla.com.br/evento/teste-para-site/3399924" target="_blank" rel="noopener">
+            Inscrição Sympla →
+          </a>
+          <a class="footer-cta secondary" data-scroll-top href="#topo">Voltar ao topo ↑</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> Conexão Profissional</span>
+        <span>Feito com cuidado em São José do Rio Pardo</span>
+      </div>
+    </footer>
+
+    <button class="back-to-top" type="button" data-scroll-top aria-label="Voltar ao topo">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 14l6-6 6 6" />
+      </svg>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
