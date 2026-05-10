@@ -10,14 +10,13 @@
   /* ---------------- Tema (dark/light) ---------------- */
 
   const themeToggle = document.querySelector(".theme-toggle");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   let savedTheme = null;
   try {
     savedTheme = localStorage.getItem("theme");
   } catch {
     savedTheme = null;
   }
-  const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+  const initialTheme = savedTheme || "dark";
 
   function applyTheme(theme) {
     root.dataset.theme = theme;
@@ -224,7 +223,7 @@
 
   /* ---------------- Card hover spotlight ---------------- */
 
-  const spotCards = document.querySelectorAll(".speaker-card");
+  const spotCards = document.querySelectorAll(".speaker-card, .theme-card");
   if (!reduceMotion && window.matchMedia("(hover: hover)").matches) {
     spotCards.forEach((card) => {
       card.addEventListener("mousemove", (event) => {
@@ -235,6 +234,101 @@
         card.style.setProperty("--my", `${my}%`);
       });
     });
+  }
+
+  /* ---------------- 3D tilt nos cards ---------------- */
+
+  const tiltEls = document.querySelectorAll("[data-tilt]");
+  if (!reduceMotion && window.matchMedia("(hover: hover)").matches) {
+    tiltEls.forEach((el) => {
+      const max = el.dataset.tiltMax ? Number(el.dataset.tiltMax) : 8;
+      let raf = 0;
+      const onMove = (event) => {
+        const rect = el.getBoundingClientRect();
+        const px = (event.clientX - rect.left) / rect.width - 0.5;
+        const py = (event.clientY - rect.top) / rect.height - 0.5;
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+          el.style.setProperty("--tx", `${px * max}deg`);
+          el.style.setProperty("--ty", `${-py * max}deg`);
+        });
+      };
+      const onLeave = () => {
+        cancelAnimationFrame(raf);
+        el.style.setProperty("--tx", "0deg");
+        el.style.setProperty("--ty", "0deg");
+      };
+      el.addEventListener("mousemove", onMove);
+      el.addEventListener("mouseleave", onLeave);
+    });
+  }
+
+  /* ---------------- Cursor glow + hero mesh tracking ---------------- */
+
+  const cursorGlow = document.querySelector(".cursor-glow");
+  const heroMesh = document.querySelector(".hero-mesh");
+  const heroSection = document.querySelector(".hero");
+
+  if (!reduceMotion && window.matchMedia("(hover: hover)").matches) {
+    let cursorRaf = 0;
+    const onPointer = (event) => {
+      cancelAnimationFrame(cursorRaf);
+      cursorRaf = requestAnimationFrame(() => {
+        if (cursorGlow) {
+          cursorGlow.style.setProperty("--cx", `${event.clientX}px`);
+          cursorGlow.style.setProperty("--cy", `${event.clientY}px`);
+        }
+        if (heroMesh && heroSection) {
+          const rect = heroSection.getBoundingClientRect();
+          if (event.clientY > rect.top && event.clientY < rect.bottom) {
+            const mx = ((event.clientX - rect.left) / rect.width) * 100;
+            const my = ((event.clientY - rect.top) / rect.height) * 100;
+            heroMesh.style.setProperty("--mx", `${mx}%`);
+            heroMesh.style.setProperty("--my", `${my}%`);
+          }
+        }
+      });
+    };
+    window.addEventListener("pointermove", onPointer, { passive: true });
+    window.addEventListener("pointerenter", () => cursorGlow && cursorGlow.classList.add("is-visible"));
+    window.addEventListener("pointerleave", () => cursorGlow && cursorGlow.classList.remove("is-visible"));
+    if (cursorGlow) cursorGlow.classList.add("is-visible");
+  }
+
+  /* ---------------- Count-up animado ---------------- */
+
+  const counters = document.querySelectorAll("[data-counter]");
+  if ("IntersectionObserver" in window && counters.length) {
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = Number(el.dataset.counter);
+          if (!Number.isFinite(target)) return;
+          if (reduceMotion) {
+            el.textContent = String(target);
+            counterObserver.unobserve(el);
+            return;
+          }
+          const duration = 1400;
+          const start = performance.now();
+          const startVal = 0;
+          const step = (now) => {
+            const t = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - t, 3);
+            const value = Math.round(startVal + (target - startVal) * eased);
+            el.textContent = String(value);
+            if (t < 1) requestAnimationFrame(step);
+          };
+          el.textContent = "0";
+          requestAnimationFrame(step);
+          counterObserver.unobserve(el);
+        });
+      },
+      { threshold: 0.4 }
+    );
+    counters.forEach((el) => counterObserver.observe(el));
   }
 
   /* ---------------- Year ---------------- */
