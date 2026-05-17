@@ -1,0 +1,24 @@
+{
+  "name": "Conexão Profissional 2026",
+  "short_name": "Conexão Profissional",
+  "description": "Capacitação Profissional em São José do Rio Pardo · 18 cursos em 5 eixos · 8, 9 e 10 de junho de 2026",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#050912",
+  "background_color": "#050912",
+  "display": "standalone",
+  "start_url": "/",
+  "lang": "pt-BR"
+}
