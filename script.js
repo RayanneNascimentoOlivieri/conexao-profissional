@@ -331,6 +331,80 @@
     counters.forEach((el) => counterObserver.observe(el));
   }
 
+  /* ---------------- Category picker: força escolha de eixo ---------------- */
+
+  const categoryButtons = document.querySelectorAll("[data-category]");
+  const categoryGroups = document.querySelectorAll(".category-group");
+  const categoryEmpty = document.querySelector("[data-category-empty]");
+  const categoryContent = document.querySelector("[data-category-content]");
+
+  function setCategoryGlow(key) {
+    if (!key) return;
+    document.documentElement.setAttribute("data-active-axis", key);
+  }
+
+  function selectCategory(key, opts) {
+    const options = opts || {};
+    let matched = false;
+
+    categoryButtons.forEach((btn) => {
+      const active = btn.dataset.category === key;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-selected", String(active));
+      if (active) matched = true;
+    });
+
+    categoryGroups.forEach((group) => {
+      group.hidden = group.dataset.group !== key;
+    });
+
+    if (categoryEmpty) categoryEmpty.hidden = matched;
+
+    setCategoryGlow(key);
+
+    if (opts && opts.updateHash !== false) {
+      const newHash = "#temas/" + key;
+      if (location.hash !== newHash) {
+        history.replaceState(null, "", newHash);
+      }
+    }
+
+    if (options.scroll !== false && categoryContent) {
+      const headerOffset = 90;
+      const top = categoryContent.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+      window.scrollTo({ top, behavior: reduceMotion ? "auto" : "smooth" });
+    }
+  }
+
+  function resetCategory() {
+    categoryButtons.forEach((btn) => {
+      btn.classList.remove("is-active");
+      btn.setAttribute("aria-selected", "false");
+    });
+    categoryGroups.forEach((group) => { group.hidden = true; });
+    if (categoryEmpty) categoryEmpty.hidden = false;
+    document.documentElement.removeAttribute("data-active-axis");
+  }
+
+  categoryButtons.forEach((btn) => {
+    btn.addEventListener("click", () => selectCategory(btn.dataset.category));
+  });
+
+  function handleHash() {
+    const hash = location.hash || "";
+    const match = hash.match(/^#temas\/([a-z]+)$/i);
+    if (match) {
+      const valid = ["tech", "people", "business", "health", "law"];
+      if (valid.indexOf(match[1]) >= 0) {
+        selectCategory(match[1], { updateHash: false, scroll: false });
+      }
+    }
+  }
+
+  window.addEventListener("hashchange", handleHash);
+  handleHash();
+
+
   /* ---------------- Year ---------------- */
 
   const yearEl = document.querySelector("#year");
